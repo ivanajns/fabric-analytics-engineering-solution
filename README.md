@@ -1,6 +1,6 @@
 # Fabric Analytics Engineering Solution
 
-An end-to-end analytics engineering project built with Microsoft Fabric, PySpark, Delta Lake, dimensional modeling, GitHub, and Power BI.
+An end-to-end analytics engineering project built with Microsoft Fabric, PySpark, Delta Lake, dimensional modeling, and Power BI.
 
 The solution demonstrates how raw transactional data can be ingested, cleaned, standardized, modeled, and transformed into a reporting-ready star schema using a Medallion architecture.
 
