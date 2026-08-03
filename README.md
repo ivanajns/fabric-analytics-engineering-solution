@@ -1,11 +1,36 @@
-# fabric-analytics-engineering-solution
+# Fabric Analytics Engineering Solution
 
-End-to-End Fabric Analytics Engineering Solution
+An end-to-end analytics engineering project built with Microsoft Fabric, PySpark, Delta Lake, dimensional modeling, GitHub, and Power BI.
+
+The solution demonstrates how raw transactional data can be ingested, cleaned, standardized, modeled, and transformed into a reporting-ready star schema using a Medallion architecture.
+
+## Solution overview
+
+The project processes 100,000 synthetic revenue transactions through three data layers:
+
+- **Bronze:** Preserves the original source data and adds ingestion metadata.
+- **Silver:** Cleans, standardizes, deduplicates, and validates the transactional data.
+- **Gold:** Models the curated data into fact and dimension tables optimized for analytics.
+
+The Gold tables are exported to GitHub as CSV files and loaded into Power BI using Import mode, creating a portable report that does not depend on continued access to the original Fabric environment.
 
 ## Repository structure
 
-notebooks/ holds data engineering and transformation notebooks. data/raw/ holds raw source data landed as-is (Bronze layer input). data/gold/ holds curated, modeled data ready for reporting (Gold layer output). report/ holds the Power BI report file and related assets.
-
-## Pipeline overview
-
-This project follows a Medallion-style analytics engineering pipeline. Raw data is first ingested from its origin systems. In the Bronze (land) stage, that raw data is landed as-is into data/raw/ with no transformation, preserving full fidelity for traceability. In the Silver (clean/dedupe) stage, the data is cleaned, deduplicated, and conformed into consistent, validated tables. In the Gold (star schema) stage, the cleaned data is modeled into a star schema of fact and dimension tables in data/gold/, optimized for reporting and analysis. Finally, Power BI connects to the Gold layer in Import mode from GitHub, pulling the modeled data into the report in report/ for fast, self-contained analysis and visualization.
+```text
+fabric-analytics-engineering-solution/
+├── README.md
+├── data/
+│   ├── raw/
+│   │   └── revenue_transactions_3yr_100k.csv
+│   └── gold/
+│       ├── gold_fact_revenue.csv
+│       ├── gold_dim_date.csv
+│       ├── gold_dim_customer.csv
+│       └── gold_dim_product.csv
+├── notebooks/
+│   ├── 01_bronze_ingestion.ipynb
+│   ├── 02_silver_transformation.ipynb
+│   └── 03_gold_dimensional_model.ipynb
+└── report/
+    ├── revenue-analytics.pbix
+    └── revenue-dashboard.png
