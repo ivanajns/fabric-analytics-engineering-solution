@@ -31,6 +31,8 @@ fabric-analytics-engineering-solution/
 │   ├── 01_bronze_ingestion.ipynb
 │   ├── 02_silver_transformation.ipynb
 │   └── 03_gold_dimensional_model.ipynb
+├── tests/
+│   └── data_quality_checks.sql
 └── report/
-    ├── revenue-analytics.pbix
-    └── revenue-dashboard.png
+    ├── revenue_analytics.pbix
+    └── revenue_dashboard.png
