@@ -14,6 +14,14 @@ The project processes 100,000 synthetic revenue transactions through three data 
 
 The Gold tables are exported to GitHub as CSV files and loaded into Power BI using Import mode, creating a portable report that does not depend on continued access to the original Fabric environment.
 
+
+## Business Impact
+
+From a business perspective, the value is creating a trusted foundation for decision-making. Instead of leadership relying on multiple reports, manually reconciled numbers, or different interpretations of the same metric, the solution creates a consistent view of revenue and performance. This reduces time spent validating the numbers and increases confidence in the decisions being made from them.
+
+More importantly, the architecture provides a foundation that can scale with the business. As reporting needs, customers, products, and data volumes grow, the organization has a repeatable approach for bringing data together, applying consistent business logic, and delivering reliable insights. The result is less time spent managing data and more time spent using it to drive business decisions.
+
+
 ## Repository structure
 
 ```text
