@@ -1,25 +1,25 @@
 # Fabric Analytics Engineering Solution
 
-An end-to-end analytics engineering project built with Microsoft Fabric, PySpark, Delta Lake, Medallion architecture, star schema dimensional model, and a Power BI dashboard with a semantic model and quality visualizations.
+An end-to-end analytics engineering project built with Microsoft Fabric, PySpark, Delta Lake, Medallion architecture, star schema dimensional modeling, and a Power BI dashboard with semantic modeling and quality visualizations.
 
-The solution demonstrates how an organization can turn raw revenue transaction data into a trusted, reporting-ready foundation in an all-in-one analytics platform. 
+The solution demonstrates how an organization can turn raw revenue transaction data into a trusted, reporting-ready foundation for analyzing business performance in an all-in-one analytics platform. 
 
 ## Solution overview
 
-The project processes 100,000 synthetic revenue transactions through three data layers:
+The project processes 100,000 synthetic revenue transactions through three data layers to support consistent reporting and analysis of revenue, customer, product, and time-based performance:
 
 - **Bronze:** Preserves the original source data and adds ingestion metadata.
 - **Silver:** Cleans, standardizes, deduplicates, and validates the transactional data.
-- **Gold:** Models the curated data into fact and dimension tables optimized for analytics.
+- **Gold:** Models the curated data into fact and dimension tables optimized for analytics and business reporting.
 
 The Gold tables are exported to GitHub as CSV files and loaded into Power BI using Import mode, creating a portable report that does not depend on continued access to the original Fabric environment.
 
 
 ## Business Impact
 
-From a business perspective, the value is creating a trusted foundation for decision-making. Instead of leadership relying on multiple reports, manually reconciled numbers, or different interpretations of the same metric, the solution creates a consistent view of revenue and performance. This reduces time spent validating the numbers and increases confidence in the decisions being made from them.
+From a business perspective, the value is creating a trusted foundation for decision-making. Instead of leadership relying on multiple reports, manually reconciled numbers, or different interpretations of the same metric, the solution creates a consistent view of revenue and performance. This enables stakeholders to analyze trends and performance across customers, products, and time while reducing time spent validating the underlying numbers.
 
-More importantly, the architecture provides a foundation that can scale with the business. As reporting needs, customers, products, and data volumes grow, the organization has a repeatable approach for bringing data together, applying consistent business logic, and delivering reliable insights. The result is less time spent managing data and more time spent using it to drive business decisions.
+More importantly, the architecture provides a foundation that can scale with the business. As reporting needs, customers, products, and data volumes grow, the organization has a repeatable approach for bringing data together, applying consistent business logic, and delivering reliable insights. The result is less time spent managing and reconciling data and more time spent using it to understand performance and drive business decisions.
 
 
 ## Repository structure
